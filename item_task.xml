@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/taskCard"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="12dp"
+
+    app:cardBackgroundColor="@color/card_bg"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="0dp"
+    app:strokeColor="#1AFFFFFF"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:padding="18dp">
+
+        <!-- TITLE -->
+
+        <TextView
+            android:id="@+id/taskTitle"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Complete Assignment"
+
+            android:textColor="@color/white_text"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <!-- DESCRIPTION -->
+
+        <TextView
+            android:id="@+id/taskDescription"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Finish Android project tasks"
+
+            android:textColor="@color/secondary_text"
+            android:textSize="14sp"
+
+            android:layout_marginTop="8dp"/>
+
+        <!-- BOTTOM ROW -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+
+            android:gravity="center_vertical"
+
+            android:layout_marginTop="16dp">
+
+            <!-- PRIORITY -->
+
+            <TextView
+                android:id="@+id/taskPriority"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="HIGH"
+
+                android:textColor="@color/accent_blue"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+
+            <!-- DUE DATE -->
+
+            <TextView
+                android:id="@+id/taskDueDate"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Due: 25 May"
+
+                android:textColor="@color/secondary_text"
+                android:textSize="12sp"
+
+                android:layout_marginStart="20dp"/>
+
+            <!-- DONE BUTTON -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/completeButton"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+
+                android:text="Done"
+
+                android:textAllCaps="false"
+
+                android:textSize="12sp"
+
+                app:backgroundTint="@color/accent_blue"
+
+                android:textColor="@color/dark_bg"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/editHint"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="( Long press anywhere to edit task )"
+
+            android:textColor="@color/secondary_text"
+
+            android:textSize="11sp"
+
+            android:alpha="0.7"
+
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

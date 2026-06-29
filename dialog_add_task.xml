@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+
+    android:padding="24dp"
+
+    android:background="@color/dark_bg">
+
+    <!-- TASK TITLE -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusBottomEnd="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputTaskTitle"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Task Title"
+
+            android:textColor="@color/white_text"
+            android:textColorHint="@color/secondary_text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- DESCRIPTION -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusBottomEnd="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputTaskDescription"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Task Description"
+
+            android:textColor="@color/white_text"
+            android:textColorHint="@color/secondary_text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- PRIORITY -->
+
+    <Spinner
+        android:id="@+id/prioritySpinner"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+
+        android:background="@color/card_bg"/>
+
+    <!-- DUE DATE -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusBottomEnd="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputDueDate"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Due Date (Example: 25 May)"
+
+            android:textColor="@color/white_text"
+            android:textColorHint="@color/secondary_text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

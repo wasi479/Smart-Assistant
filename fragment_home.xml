@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="100dp">
+
+        <!-- GREETING -->
+
+        <TextView
+            android:id="@+id/greetingText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Hello 👋"
+            android:textColor="@color/white_text"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginTop="56dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/notificationIcon"/>
+
+        <!-- NOTIFICATION ICON -->
+
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_notification"
+            android:padding="8dp"
+            android:background="@drawable/ripple_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Notifications"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/greetingText"/>
+
+        <!-- SUBTITLE -->
+
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ready to study smarter today?"
+            android:textColor="@color/secondary_text"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintTop_toBottomOf="@id/greetingText"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- AI HERO CARD -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/aiCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="@color/card_bg"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#1A00D4FF"
+            app:strokeWidth="1dp"
+            app:layout_constraintTop_toBottomOf="@id/subtitleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- TOP ROW -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ai"
+                        app:tint="@color/accent_blue"
+                        android:contentDescription="AI"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="POWERED BY AI"
+                        android:textColor="@color/accent_blue"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.12"
+                        android:layout_marginStart="8dp"/>
+
+                </LinearLayout>
+
+                <!-- TITLE -->
+
+                <TextView
+                    android:id="@+id/aiTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AI Study Assistant"
+                    android:textColor="@color/white_text"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp"/>
+
+                <!-- DESCRIPTION -->
+
+                <TextView
+                    android:id="@+id/aiDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ask questions, summarize notes, generate study plans and boost productivity."
+                    android:textColor="@color/secondary_text"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier="1.4"
+                    android:layout_marginTop="8dp"/>
+
+                <!-- BUTTON -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/openAiButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:text="Open AI Chat"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_bg"
+                    android:backgroundTint="@color/accent_blue"
+                    android:layout_marginTop="20dp"
+                    app:cornerRadius="14dp"
+                    app:icon="@drawable/ai"
+                    app:iconSize="16dp"
+                    app:iconTint="@color/dark_bg"
+                    app:iconPadding="6dp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- DAILY MOTIVATION CARD -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/motivationCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="@color/dark_secondary"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:layout_constraintTop_toBottomOf="@id/aiCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Motivation"
+                    android:textColor="@color/white_text"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Success doesn’t come from what you do occasionally. It comes from what you do consistently."
+                    android:textColor="@color/secondary_text"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingMultiplier="1.4"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- STUDY TIPS CARD -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/tipsCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="@color/dark_secondary"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:layout_constraintTop_toBottomOf="@id/motivationCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Smart Study Tips"
+                    android:textColor="@color/white_text"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Study in short focused sessions\n\n• Revise actively instead of passively reading\n\n• Use AI tools to simplify difficult concepts"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingMultiplier="1.4"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ABOUT APP CARD -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/aboutCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="40dp"
+            app:cardBackgroundColor="@color/dark_secondary"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:layout_constraintTop_toBottomOf="@id/tipsCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About SmartAssistant"
+                    android:textColor="@color/white_text"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SmartAssistant helps students stay productive using AI-powered study tools, task management, and intelligent note saving."
+                    android:textColor="@color/secondary_text"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingMultiplier="1.4"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/noteCard"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="12dp"
+
+    app:cardBackgroundColor="@color/card_bg"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="0dp"
+    app:strokeColor="#1AFFFFFF"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <!-- TITLE ROW with delete button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/noteTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Note Title"
+                android:textColor="@color/white_text"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/deleteNoteButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="🗑"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+        <!-- CONTENT PREVIEW -->
+        <TextView
+            android:id="@+id/noteContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note content preview..."
+            android:textColor="@color/secondary_text"
+            android:textSize="13sp"
+            android:layout_marginTop="8dp"
+            android:maxLines="3"
+            android:ellipsize="end"/>
+
+        <!-- DATE -->
+        <TextView
+            android:id="@+id/noteDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jan 01, 2025"
+            android:textColor="@color/accent_blue"
+            android:textSize="11sp"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/dark_bg"
+
+    android:fillViewport="true"
+
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:padding="20dp">
+
+        <!-- AI HEADER -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:cardBackgroundColor="@color/card_bg"
+
+            app:cardCornerRadius="24dp"
+
+            app:strokeColor="#1AFFFFFF"
+
+            app:strokeWidth="1dp"
+
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="AI Study Assistant"
+
+                    android:textColor="@color/white_text"
+
+                    android:textSize="28sp"
+
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Generate summaries, quizzes, explanations and study plans"
+
+                    android:textColor="@color/secondary_text"
+
+                    android:textSize="15sp"
+
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- PROMPT INPUT -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="24dp"
+
+            app:boxBackgroundMode="outline"
+
+            app:boxCornerRadiusTopStart="18dp"
+            app:boxCornerRadiusTopEnd="18dp"
+            app:boxCornerRadiusBottomStart="18dp"
+            app:boxCornerRadiusBottomEnd="18dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/promptInput"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="Ask AI anything..."
+
+                android:minHeight="120dp"
+
+                android:gravity="top"
+
+                android:padding="16dp"
+
+                android:textColor="@color/white_text"
+
+                android:textColorHint="@color/secondary_text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- QUICK ACTIONS TITLE -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Quick AI Actions"
+
+            android:textColor="@color/white_text"
+
+            android:textSize="18sp"
+
+            android:textStyle="bold"
+
+            android:layout_marginTop="28dp"/>
+
+        <!-- QUICK ACTIONS -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+
+            android:layout_marginTop="16dp">
+
+            <!-- SUMMARIZE -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/summarizeCard"
+
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+
+                android:layout_weight="1"
+
+                android:layout_marginEnd="8dp"
+
+                app:cardBackgroundColor="@color/card_bg"
+
+                app:cardCornerRadius="18dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical"
+
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="📝"
+
+                        android:textSize="28sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Summarize"
+
+                        android:textColor="@color/white_text"
+
+                        android:textStyle="bold"
+
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- EXPLAIN -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/explainCard"
+
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+
+                android:layout_weight="1"
+
+                android:layout_marginStart="8dp"
+
+                app:cardBackgroundColor="@color/card_bg"
+
+                app:cardCornerRadius="18dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical"
+
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="💡"
+
+                        android:textSize="28sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Explain"
+
+                        android:textColor="@color/white_text"
+
+                        android:textStyle="bold"
+
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- SECOND ROW -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+
+            android:layout_marginTop="16dp">
+
+            <!-- QUIZ -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/quizCard"
+
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+
+                android:layout_weight="1"
+
+                android:layout_marginEnd="8dp"
+
+                app:cardBackgroundColor="@color/card_bg"
+
+                app:cardCornerRadius="18dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical"
+
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="❓"
+
+                        android:textSize="28sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Quiz"
+
+                        android:textColor="@color/white_text"
+
+                        android:textStyle="bold"
+
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- STUDY PLAN -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/studyPlanCard"
+
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+
+                android:layout_weight="1"
+
+                android:layout_marginStart="8dp"
+
+                app:cardBackgroundColor="@color/card_bg"
+
+                app:cardCornerRadius="18dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical"
+
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="📚"
+
+                        android:textSize="28sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Study Plan"
+
+                        android:textColor="@color/white_text"
+
+                        android:textStyle="bold"
+
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- GENERATE BUTTON -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/generateButton"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Generate AI Response"
+
+            android:textAllCaps="false"
+
+            android:textSize="16sp"
+
+            android:layout_marginTop="28dp"
+
+            app:backgroundTint="@color/accent_blue"
+
+            android:textColor="@color/dark_bg"/>
+        <!-- RESPONSE CARD -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/responseLayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:visibility="gone"
+
+            app:cardBackgroundColor="@color/card_bg"
+
+            app:cardCornerRadius="24dp"
+
+            app:strokeColor="#1AFFFFFF"
+
+            app:strokeWidth="1dp"
+
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:padding="20dp">
+
+                <!-- TITLE -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="AI Response"
+
+                    android:textColor="@color/white_text"
+
+                    android:textSize="20sp"
+
+                    android:textStyle="bold"/>
+
+                <!-- RESPONSE TEXT -->
+
+                <TextView
+                    android:id="@+id/responseText"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/white_text"
+
+                    android:textSize="15sp"
+
+                    android:lineSpacingExtra="6dp"
+
+                    android:layout_marginTop="18dp"/>
+
+                <!-- BUTTONS -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+
+                    android:layout_marginTop="24dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/copyButton"
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+
+                        android:text="Copy"
+
+                        android:textAllCaps="false"
+
+                        android:textColor="@color/dark_bg"
+
+                        app:backgroundTint="@color/accent_blue"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/shareButton"
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+
+                        android:layout_marginStart="8dp"
+
+                        android:text="Share"
+
+                        android:textAllCaps="false"
+
+                        android:textColor="@color/dark_bg"
+
+                        app:backgroundTint="@color/accent_blue"/>
+
+                </LinearLayout>
+
+                <!-- SECOND ROW -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/saveNoteButton"
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+
+                        android:text="Save Note"
+
+                        android:textAllCaps="false"
+
+                        android:textColor="@color/dark_bg"
+
+                        app:backgroundTint="@color/accent_blue"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/regenerateButton"
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+
+                        android:layout_marginStart="8dp"
+
+                        android:text="Regenerate"
+
+                        android:textAllCaps="false"
+
+                        android:textColor="@color/dark_bg"
+
+                        app:backgroundTint="@color/accent_blue"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+</ScrollView>
